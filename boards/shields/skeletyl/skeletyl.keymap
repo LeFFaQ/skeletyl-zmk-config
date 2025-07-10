@@ -32,8 +32,8 @@
                 raise_layer {
                         bindings = <
                                 &kp INS    &kp PSCRN &kp K_CMENU  &trans       &trans   &trans  /**/    &trans &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans
-                                &kp LALT   &kp LCTRL &kp LSHFT    &trans       &kp CLCK &trans  /**/    &trans &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &trans
-                                &kp K_UNDO &kp CUT   &kp K_COPY   &kp K_PASTE  &trans   &trans  /**/    &trans &trans    &trans   &trans    &trans    &trans
+                                &kp LALT   &kp LCTRL &kp LSHFT    &trans       &kp CLCK &trans  /**/    &trans &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans
+                                &kp K_UNDO &kp CUT   &kp K_COPY   &kp K_PASTE  &trans   &trans  /**/    &trans &trans   &trans    &trans    &trans    &trans
                         >;
                 };
 
