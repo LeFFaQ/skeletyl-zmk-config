@@ -6,10 +6,6 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
-&skeletyl_layout {
-    transform = <&default_transform>;
-};
-
 
 / {
 

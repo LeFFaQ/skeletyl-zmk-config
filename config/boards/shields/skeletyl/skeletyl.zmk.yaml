@@ -3,7 +3,7 @@ id: skeletyl
 name: skeletyl
 type: shield
 url: https://github.com/leffaq/skeletyl-zmk-config
-requires: []
+requires: [pro_micro]
 exposes: []
 features:
   - keys
