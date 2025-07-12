@@ -9,31 +9,40 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+
+        conditional_layers {
+		compatible = "zmk,conditional-layers";
+		adjust_layer {
+			if-layers = <1 2>;
+			then-layer = <3>;
+		};
+	};
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 
                         bindings = <
-                                &kp Q      &kp W      &kp E       &kp R       &kp T &kp SPACE   /**/    &kp ENTER &kp Y &kp U       &kp I       &kp O      &kp P   
-                                &mt LGUI A &mt LALT S &mt LSHFT D &mt LCTRL F &kp G &mo 1       /**/    &mo 2     &kp H &mt RCTRL J &mt RSHFT K &mt RALT L &mt RGUI SEMI
-                                &kp Z      &kp X      &kp C       &kp V       &kp B &kp LGUI    /**/    &kp RGUI  &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH
+                                &kp Q       &kp W       &kp E        &kp R        &kp T &kp SPACE       /**/    &kp ENTER &kp Y &kp U       &kp I       &kp O      &kp P   
+                                &hml LGUI A &hml LALT S &hml LSHFT D &hml LCTRL F &kp G &mo 1           /**/    &mo 2     &kp H &hmr RCTRL J &hmr RSHFT K &hmr RALT L &hmr RGUI SEMI
+                                &kp Z       &kp X       &kp C        &kp V        &kp B &kp LGUI        /**/    &kp RGUI  &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH
 
                         >;
                 };
                 lower_layer {
                         bindings = <
                                 &kp N1    &kp N2    &kp N3      &kp N4   &kp N5    &trans  /**/  &trans   &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    
-                                &kp EXCL  &kp AT    &kp HASH    &kp DLLR &kp PRCNT &trans  /**/  &kp PIPE &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR
+                                &kp EXCL  &kp AT    &kp HASH    &kp DLLR &kp PRCNT &trans  /**/  &trans   &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR
 			        &kp EQUAL &kp MINUS &kp KP_PLUS &kp LBRC &kp RBRC  &trans  /**/  &trans   &kp LBKT  &kp RBKT &kp SEMI        &kp COLON &kp BSLH
                         >;
                 };
 
                 raise_layer {
                         bindings = <
-                                &kp INS    &kp PSCRN &kp K_CMENU  &trans       &trans   &trans  /**/    &trans &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans
-                                &kp LALT   &kp LCTRL &kp LSHFT    &trans       &kp CLCK &trans  /**/    &trans &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans
-                                &kp K_UNDO &kp CUT   &kp K_COPY   &kp K_PASTE  &trans   &trans  /**/    &trans &trans   &trans    &trans    &trans    &trans
+                                &kp INS    &kp PSCRN   &kp K_CMENU  &trans       &trans   &trans  /**/    &trans &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp BSPC
+                                &kp LALT   &kp LCTRL   &kp LSHFT    &trans       &kp CLCK &trans  /**/    &trans &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans
+                                &kp K_UNDO &kp K_CUT   &kp K_COPY   &kp K_PASTE  &trans   &trans  /**/    &trans &trans   &trans    &trans    &kp SQT    &kp PIPE
                         >;
                 };
 
